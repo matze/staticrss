@@ -1,5 +1,5 @@
 import unittest
-import srss.feed
+import staticrss.feed
 
 
 class Item(object):
@@ -13,7 +13,7 @@ class TestStorage(unittest.TestCase):
         self.first_item = Item('foo.com/bar.html', 'Foobar')
         self.url = 'foo.com'
         self.backend = {self.url: [self.first_item]}
-        self.storage = srss.feed.Storage(self.backend)
+        self.storage = staticrss.feed.Storage(self.backend)
 
     def test_add_item_to_existing_url(self):
         item = Item('foo.com/baz.html', 'Foobaz')
