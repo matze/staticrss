@@ -1,6 +1,11 @@
 staticrss
 =========
 
+|travis|_
+
+.. |travis| image:: https://travis-ci.org/matze/staticrss.png
+.. _travis: https://travis-ci.org/matze/staticrss
+
 srss is a static site generator similar to Jekyll but for RSS pages. Think of
 GoogleReader gone static.
 
