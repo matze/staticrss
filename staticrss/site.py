@@ -7,11 +7,6 @@ import shelve
 import staticrss.feed
 
 
-def _copyable_files(extension):
-    return (path for path in os.listdir('.')
-            if not path.startswith('_') and path.endswith(extension))
-
-
 def _update_feeds(feed_urls, storage):
     """Read urls from *feed_urls* and update the *storage*"""
     cache_storage = shelve.open('.cache')
