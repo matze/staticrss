@@ -4,3 +4,4 @@ feedcache
 feedparser
 jinja2
 PyYAML
+nose
