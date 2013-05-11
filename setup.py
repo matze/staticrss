@@ -1,5 +1,5 @@
 from setuptools import setup
-from srss import __version__
+from staticrss import __version__
 
 
 setup(name='staticrss',
@@ -7,6 +7,7 @@ setup(name='staticrss',
       author='Matthias Vogelgesang',
       author_email='matthias.vogelgesang@gmail.com',
       license='MIT',
+      url='https://github.com/matze/staticrss',
       description='Static site generator for RSS and Atom feeds',
       long_description=open('README.rst').read(),
       packages=['staticrss'],
