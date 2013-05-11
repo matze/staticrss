@@ -1,0 +1,31 @@
+#!/usr/bin/python
+
+import argparse
+import logging
+import staticrss.site
+import staticrss.config
+
+
+def import_ompl(args):
+    staticrss.config.import_ompl(args.filename)
+
+
+def build_site(args):
+    config = staticrss.config.read()
+    staticrss.site.build(config)
+
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO)
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers()
+
+    import_parser = subparsers.add_parser('import', help="Import OMPL")
+    import_parser.add_argument('filename', help="Filename")
+    import_parser.set_defaults(func=import_ompl)
+
+    build_parser = subparsers.add_parser('build', help="Build site")
+    build_parser.set_defaults(func=build_site)
+
+    args = parser.parse_args()
+    args.func(args)
