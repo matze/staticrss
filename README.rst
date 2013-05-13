@@ -6,10 +6,10 @@ staticrss
 .. |travis| image:: https://travis-ci.org/matze/staticrss.png
 .. _travis: https://travis-ci.org/matze/staticrss
 
-srss is a static site generator similar to Jekyll but for RSS pages. Think of
-GoogleReader gone static.
+staticrss is a static site generator similar to Jekyll but for RSS pages. Think
+of GoogleReader gone static.
 
-Quickly install srss with::
+You can simply install it with pip::
 
     $ pip install staticrss
 
@@ -64,3 +64,5 @@ Dependencies
 * pytz
 * PyYAML
 * feedcache
+
+As a developer you should also install nose for running the unit tests.
