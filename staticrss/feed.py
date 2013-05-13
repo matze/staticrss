@@ -33,6 +33,19 @@ class Storage(object):
 
         self.backend[url] = old_items
 
+    def update_age(self):
+        """Update age of all items."""
+        today = pytz.UTC.localize(datetime.datetime.today())
+        urls = self.backend.keys()
+
+        for url in urls:
+            items = self.backend[url]
+
+            for item in items:
+                item.age = today - item.published
+
+            self.backend[url] = items
+
     def items(self):
         """Yield *all* feed items."""
         for k, v in self.backend.items():

@@ -18,6 +18,7 @@ def _update_feeds(feed_urls, storage):
         items = [staticrss.feed.Item(item, feed) for item in feed.entries]
         storage.update(url, items)
 
+    storage.update_age()
     cache_storage.close()
 
 
